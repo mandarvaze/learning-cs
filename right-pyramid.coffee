@@ -10,9 +10,13 @@ Write a program that makes 7 calls to console.log to output the following triang
 ######
 #######
 
-### Print Pyramind ###
-for i in [1...7]
-   out = ""
-   for j in [1...i]
-     out += "#"
-   console.log out
+### Print Pyramid ###
+rightPyramid = () ->
+  out = ""
+  for i in [0...7]
+    for j in [0...i+1]
+      out += "#"
+    out += "\n"
+  out
+
+console.log rightPyramid()
